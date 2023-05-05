@@ -15,7 +15,7 @@ class FileController {
     static async profile(req, res) {
         try {
             let { size, mimetype, filename, path } = req.file
-
+//manual file type test 
             if (!mimetype.includes("image")) {
                 util.setError(400, "Select only image");
                 fs.unlinkSync(path);
